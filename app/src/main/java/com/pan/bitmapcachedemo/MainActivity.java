@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         new MemoryCache().cleanBitmap();
         new FileCache(this).clean();
 
+
+
     }
 
 

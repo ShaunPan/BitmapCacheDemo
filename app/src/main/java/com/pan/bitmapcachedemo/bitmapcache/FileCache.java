@@ -70,6 +70,23 @@ public class FileCache {
     }
 
     /**
+     * 根据key值获取对应的File
+     * @param key
+     * @return
+     */
+    public File getFile(String key) {
+        File file = new File(cacheDir, key);
+        if (file.exists()) {
+            Log.i(FILE_CACHE_TAG, "the file you wanted exists " + file.getAbsolutePath());
+            return file;
+        } else {
+            Log.i(FILE_CACHE_TAG, "the file you wanted does not exists " + file.getAbsolutePath());
+        }
+
+        return null;
+    }
+
+    /**
      * 清空sdcard中存储的图片
      */
     public void clean() {

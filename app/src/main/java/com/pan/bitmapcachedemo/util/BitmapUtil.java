@@ -1,6 +1,7 @@
 package com.pan.bitmapcachedemo.util;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -36,4 +37,15 @@ public class BitmapUtil {
             return false;
         }
     }
+
+    /**
+     * 将file转换为bitmap
+     * @param file file
+     * @param options 图片选项
+     * @return bitmap
+     */
+    public static Bitmap decodeFile(File file, BitmapFactory.Options options) {
+        return BitmapFactory.decodeFile(file.getAbsolutePath(), options);
+    }
+
 }
